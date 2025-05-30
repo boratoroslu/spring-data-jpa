@@ -1,16 +1,19 @@
 package com.boratoroslu.services;import java.util.List;
 
+import com.boratoroslu.dto.DtoStudentIU;
+import com.boratoroslu.dto.DtoStudent;
+import com.boratoroslu.dto.DtoStudentIU;
 import com.boratoroslu.entities.Student;
 
 public interface IStudentService {
 
-	public Student saveStudent(Student student);
+	public DtoStudent saveStudent(DtoStudentIU student);
 	
-	public List<Student> getAllStudents();
+	public List<DtoStudent> getAllStudents();
 	
-	public Student getStudentById(Integer id);
+	public DtoStudent getStudentById(Integer id);
 	
 	public void deleteStudent(Integer id);
 	
-	public Student updateStudent(Integer id , Student uptadeStudent);
+	public DtoStudent updateStudent(Integer id , DtoStudentIU dtoStudentIU);
  }
